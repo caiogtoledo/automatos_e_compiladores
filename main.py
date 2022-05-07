@@ -1,4 +1,5 @@
-from simularDfa import simularDfa
+from simulateDfa import simulateDfa
+from program import program
 import sys
 
 class Dfa:
@@ -11,7 +12,7 @@ class Dfa:
         self.dfa = dfa
 
     def run(self):
-        simularDfa(self.dfa, '1110')
+        program(self.dfa)
 
 
 if __name__ == "__main__":  

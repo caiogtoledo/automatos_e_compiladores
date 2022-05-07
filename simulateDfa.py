@@ -1,4 +1,4 @@
-def simularDfa(dfa, input):
+def simulateDfa(dfa, input):
     state = dfa['initial_state']
     acept = False
     counter = 0
@@ -13,10 +13,9 @@ def simularDfa(dfa, input):
             break
 
         try:
-            print(f'o c agora é: {c}')
-            print(f'o estadoanterior é: {state}')
+            state_before = state
             state = dfa['delta'][(state, c)]
-            print(f'estado atual: {state}')
+            print(f"({state_before}, '{c}') => {state}")
         except:
             print(f'Não foi possível realizar a transição do estado {state} com entrada {c}')
             break
